@@ -53,4 +53,4 @@ jobs:
             BUILDKIT_MULTI_PLATFORM=1
             python_version=${{ matrix.python_version }}
             poetry_version=${{ matrix.poetry_version }}
-            os_variant=${{ matrix.poetry_version }}
+            os_variant=${{ matrix.debian_version }}
