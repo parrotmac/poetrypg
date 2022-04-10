@@ -36,7 +36,7 @@ jobs:
           platforms: "linux/amd64,linux/arm64"
           push: true
           tags: isaacp/poetrypg:alpine
-	  file: Dockerfile.alpine
+          file: Dockerfile.alpine
           build-args: BUILDKIT_MULTI_PLATFORM=1,python_version=${{ matrix.python_version }},poetry_version=${{ matrix.poetry_version }}
       -
         name: Build and push Ubuntu
