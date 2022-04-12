@@ -1,7 +1,7 @@
 import datetime
 import os
 import sys
-import ruamel.yaml
+import ruamel_yaml as yaml
 from github import Github
 from typing import List, Tuple
 import subprocess
