@@ -101,7 +101,6 @@ if __name__ == "__main__":
 
         if len(new_poetry_versions) > 1:
           for i, _ in enumerate(new_poetry_versions):
-            breakpoint()
             commit_description += f"* {removed_poetry_versions[i]} -> {new_poetry_versions[i]}\n"
         
         # I did not have luck using GitPython to do this :(
