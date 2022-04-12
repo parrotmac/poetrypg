@@ -34,6 +34,7 @@ jobs:
         platforms: "linux/amd64,linux/arm64"
         push: true
         tags: isaacp/poetrypg:alpine
+        tags: isaacp/poetrypg:${{ matrix.poetry_version }}-py${{ matrix.python_version }}-alpine
         file: Dockerfile.alpine
         build-args: |
           BUILDKIT_MULTI_PLATFORM=1
@@ -44,7 +45,7 @@ jobs:
       with:
         platforms: "linux/amd64,linux/arm64"
         push: true
-        tags: isaacp/poetrypg:ubuntu
+        tags: isaacp/poetrypg:${{ matrix.poetry_version }}-py${{ matrix.python_version }}-${{ matrix.debian_version }}
         file: Dockerfile.debian
         build-args: |
           BUILDKIT_MULTI_PLATFORM=1
