@@ -33,7 +33,6 @@ jobs:
       with:
         platforms: "linux/amd64,linux/arm64"
         push: true
-        tags: isaacp/poetrypg:alpine
         tags: isaacp/poetrypg:${{ matrix.poetry_version }}-py${{ matrix.python_version }}-alpine
         file: Dockerfile.alpine
         build-args: |
