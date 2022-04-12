@@ -1,7 +1,10 @@
 ARG python_version=3.10
 ARG os_variant=bullseye
 ARG poetry_version=1.1.13
+
 FROM python:${python_version}-${os_variant}
+
+ARG poetry_version=1.1.13
 
 ENV PYTHONFAULTHANDLER=1 \
   PYTHONUNBUFFERED=1 \
@@ -9,11 +12,10 @@ ENV PYTHONFAULTHANDLER=1 \
   PIP_NO_CACHE_DIR=off \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
   PIP_DEFAULT_TIMEOUT=100 \
-  POETRY_VERSION=${poetry_version}
+  POETRY_VERSION=$poetry_version
 
-RUN set -ex \
-    && apt-get update && apt-get install -y \
-    && build-essential libpq-dev libffi-dev \
+RUN apt-get update && apt-get install -y \
+    build-essential libpq-dev libffi-dev \
     && pip install --upgrade pip \
     && pip install "poetry==$POETRY_VERSION"
 
