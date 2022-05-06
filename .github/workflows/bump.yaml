@@ -2,8 +2,8 @@ name: bump
 
 on:
   schedule:
-    # Every 15 minutes
-  - cron: "*/15 * * * *"
+    # At minute 13 past every 2nd hour. https://crontab.guru/#13_*/2_*_*_*
+  - cron: "13 */2 * * *"
   push:
     branches:
     - 'main'
