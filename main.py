@@ -26,6 +26,7 @@ def update_workflow(
 ) -> Tuple[List[str], List[str]]:
     yaml = ruamel.yaml.YAML()
     yaml.preserve_quotes = True
+    yaml.width = 4096
     data = yaml.load(fp)
 
     matrix = (
