@@ -26,7 +26,7 @@ jobs:
           git config --global user.name "Isaac Parker"
           git config --get-regexp "user.*"
           curl -sSL https://install.python-poetry.org | python3 -
-          source $HOME/.poetry/env
+          export PATH="$PATH:$HOME/.local/bin"
           poetry install
           poetry run python main.py
         env:
