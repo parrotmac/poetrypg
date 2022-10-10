@@ -19,3 +19,4 @@ RUN apt-get update && apt-get install -y \
     && pip install --upgrade pip \
     && curl -sSL https://install.python-poetry.org | python3 - --version=$POETRY_VERSION
 
+ENV PATH="$PATH:$HOME/.local/bin"
