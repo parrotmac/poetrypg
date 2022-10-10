@@ -25,7 +25,7 @@ jobs:
           git config --global user.email "parrotmac+repo-bot@gmail.com"
           git config --global user.name "Isaac Parker"
           git config --get-regexp "user.*"
-          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+          curl -sSL https://install.python-poetry.org | python3 -
           source $HOME/.poetry/env
           poetry install
           poetry run python main.py
