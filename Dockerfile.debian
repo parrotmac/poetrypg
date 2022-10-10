@@ -15,7 +15,7 @@ ENV PYTHONFAULTHANDLER=1 \
   POETRY_VERSION=$poetry_version
 
 RUN apt-get update && apt-get install -y \
-    build-essential libpq-dev libffi-dev \
+    build-essential libpq-dev libffi-dev curl \
     && pip install --upgrade pip \
-    && pip install "poetry==$POETRY_VERSION"
+    && curl -sSL https://install.python-poetry.org | python3 - --version=$POETRY_VERSION
 
